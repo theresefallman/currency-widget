@@ -151,7 +151,7 @@ class Currency_Widget extends WP_Widget {
 	
 		// Sets field for currency code
 		$field = "code";
-		$label = __("Currency:", "currency_widget");
+		$label = __("Choose currency:", "currency_widget");
 		$field_id = $this->get_field_id($field);
 		$field_name = $this->get_field_name($field);
 		$value = esc_attr($instance[$field]);
