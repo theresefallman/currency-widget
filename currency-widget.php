@@ -32,19 +32,19 @@ $currencyWidget = new CurrencyWidget();
 class CurrencyWidget {
 	
 	public function __construct() {
-		add_action('widgets_init', array(&$this, 'register_widgets') );
-		add_action('wp_enqueue_scripts', array(&$this, 'front_scripts') );
+		add_action( 'widgets_init', array(&$this, 'register_widgets') );
+		add_action( 'wp_enqueue_scripts', array(&$this, 'front_scripts') );
 	}
 	
 	// Register currency widget
 	public function register_widgets() {
-		register_widget('Currency_Widget');
+		register_widget( 'Currency_Widget' );
 	}
 
 	// Register and enqueue some style-scripts
 	public function front_scripts() {
-		wp_register_style('currency_widget_style', plugins_url('currency-widget.css', __FILE__));
-		wp_enqueue_style('currency_widget_style');
+		wp_register_style( 'currency_widget_style', plugins_url('currency-widget.css', __FILE__) );
+		wp_enqueue_style( 'currency_widget_style' );
 	}
 }
 
